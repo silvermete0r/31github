@@ -66,10 +66,21 @@ def app():
     }
     sorted_unique_team = sorted(player_stats.Tm.unique())
     selected_team = st.multiselect('Team', sorted_unique_team, sorted_unique_team)
+    with st.expander('Team Description'):
+        st.json(team_fullnames)
 
     # Position Selection
+    pos_fullnames = {
+        'PG': 'Point Guard',
+        'SG': 'Shooting Guard',
+        'SF': 'Small Forward',
+        'PF': 'Power Forward',
+        'C': 'Center'
+    }
     unique_pos = ['PG', 'SG', 'SF', 'PF', 'C']
     selected_pos = st.multiselect('Position', unique_pos, unique_pos)
+    with st.expander('Position Description'):
+        st.json(pos_fullnames)
 
     # Filtering Data
     df_selected_team = player_stats[(player_stats.Tm.isin(selected_team)) & (player_stats.Pos.isin(selected_pos))]
@@ -87,9 +98,15 @@ def app():
         return href
     
     st.markdown(filedownload(df_selected_team), unsafe_allow_html=True)
+    
 
-    # Correlation Heatmap
-    if st.button('Correlation Heatmap'):
+    # Interesting Stats: Correlation Heatmap, Top 10 Best Players, Top 10 Defensive Players, Top 10 Rebouders, Favorite Player Stats
+    selected_option = st.selectbox('Select Option', ['None', 'Correlation Heatmap', 'Top 10 Best Players', 'Top 10 Defensive Players', 'Top 10 Rebouders', 'Favorite Player Stats'])
+    
+    if selected_option == 'None':
+        st.write('Please select an option from the dropdown menu.')
+
+    if selected_option == 'Correlation Heatmap':
         st.header('Correlation Matrix Heatmap')
         df_selected_team.to_csv('data/output.csv', index=False)
         df = pd.read_csv('data/output.csv')
@@ -101,3 +118,38 @@ def app():
         sns.heatmap(corr, mask=mask, cmap='viridis', annot=True, annot_kws={'size': 7}, fmt='.2f', linewidths=0.5)
         plt.tight_layout()
         st.pyplot()
+
+    if selected_option == 'Top 10 Best Players':
+        st.header('Top 10 Best Players by Points')
+        df_selected_team.to_csv('data/output.csv', index=False)
+        df = pd.read_csv('data/output.csv')
+        df = df.sort_values(by=['PTS'], ascending=False)
+        df = df.head(10)
+        st.dataframe(df)
+
+    if selected_option == 'Top 10 Defensive Players':
+        st.header('Top 10 Defensive Players by STL')
+        df_selected_team.to_csv('data/output.csv', index=False)
+        df = pd.read_csv('data/output.csv')
+        df = df.sort_values(by=['STL'], ascending=False)
+        df = df.head(10)
+        st.dataframe(df)
+        
+    if selected_option == 'Top 10 Rebouders':
+        st.header('Top 10 Rebouders by TRB')
+        df_selected_team.to_csv('data/output.csv', index=False)
+        df = pd.read_csv('data/output.csv')
+        df = df.sort_values(by=['TRB'], ascending=False)
+        df = df.head(10)
+        st.dataframe(df)
+
+    if selected_option == 'Favorite Player Stats':
+        with st.form(key='my_form'):
+            player_name = st.text_input(label='Enter Player Name')
+            submit_button = st.form_submit_button(label='Submit')
+        if submit_button:
+            st.markdown(f'Player Stats for <code>{player_name}</code>', unsafe_allow_html=True)
+            df_selected_team.to_csv('data/output.csv', index=False)
+            df = pd.read_csv('data/output.csv')
+            df = df[df['Player'].str.contains(player_name)]
+            st.dataframe(df)
