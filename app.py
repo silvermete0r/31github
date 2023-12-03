@@ -1,6 +1,8 @@
 import streamlit as st
+import requests
 from streamlit_option_menu import option_menu
 import pandas as pd
+from constants import EMAIL_API
 from projects import day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16, day17, day18, day19, day20, day21, day22, day23, day24, day25, day26, day27, day28, day29, day30, day31
 
 # Set Page Config
@@ -21,7 +23,44 @@ def main():
             [![Follow](https://img.shields.io/github/followers/silvermete0r.svg?logo=github&style=flat-square)](https://github.com/silvermete0r/31github)&nbsp;
             [![License](https://img.shields.io/github/license/silvermete0r/31github.svg?logo=github&style=flat-square)](https://github.com/silvermete0r/31github)
     ''')
-    st.write('👋 My name is Arman, and I\'m very interested in Data Science and Machine Learning!')
+    st.subheader('About Me')
+    st.write('👋 My name is Arman, and I have accepted the challenge of 31 days of coding from [GrowthHungry](https://www.growthhungry.life/challenge)')
+    st.write('📚 I\'m currently learning `Data Science` and `Machine Learning`.')
+    st.write('👨‍💻 All of my projects are available at [my GitHub](https://github.com/silvermete0r)')
+
+    st.subheader('My Projects')    
+    st.write('📊 [Day #1: NBA Player Stats Explorer]()')
+    st.write('📈 [Day #2: Stocks Price Web App]()')
+    
+
+    st.subheader('Contact Me')
+
+    def send_message(user_name, user_email, user_message):
+        return requests.post(
+        "https://api.mailgun.net/v3/sandboxebd1ff2187ca4bf6a7610daf43c30c0a.mailgun.org/messages",
+        auth=("api", EMAIL_API),
+        data={"from": "Mailgun Sandbox <postmaster@sandboxebd1ff2187ca4bf6a7610daf43c30c0a.mailgun.org>",
+            "to": "Supwithproject <supwithproject@gmail.com>",
+            "subject": f"31Days Dataflow User Message from {user_name} <{user_email}>",
+            "text": user_message})
+
+    with st.form(key='contact_form', clear_on_submit=True):
+        user_name = st.text_input('Name')
+        user_email = st.text_input('Email')
+        user_message = st.text_area('Message')
+        submitted = st.form_submit_button('Submit')
+        if submitted:
+            try:
+                send_message(user_name, user_email, user_message)
+                st.success('Thank you for your message! I will get back to you as soon as possible.')
+            except Exception as e:
+                st.error('Something went wrong... Please try again.')
+                st.error(e)
+
+
+    st.write('✈️ Telegram: [@silvermete0r](https://t.me/silvermete0r)')
+    st.write('📷 Instagram: [@grembim](https://www.instagram.com/grembim)')
+    st.write('🔗 Taplink: https://one.link/grembim')
 
 # Multipage WebApp Design
 class MultiApp:

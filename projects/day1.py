@@ -10,7 +10,7 @@ def app():
     st.subheader('Basketball Player Data Explorer 🏀')
 
     st.markdown("""
-    This app performs simple webscraping of basketball player stats data!
+    This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!
     * **Python modules:** base64, pandas, streamlit.
     * **Data source:** [Basketball-reference.com](https://www.basketball-reference.com/).
     * **Reference:** [Data Professor](https://github.com/dataprofessor)
