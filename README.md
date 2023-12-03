@@ -28,11 +28,11 @@
 <!-- Projects Table -->
 
 ## 📂 My Projects [#31Github Challenge]
-| Project | Description | Reference |
-| ------- | ----------- | --------- |
-| Day #1  | 🏀 NBA Player Stats Explorer | This app analyzes data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scraping! | Data Professor |
-| Day #2  | 📈 Stocks Price Web App | This app retrieves the list of the S&P 500 from Wikipedia and analyzes these companies' stats using yfinance! | Data Professor |
-| Day #3  | | | Data Professor |
+| Title | Project | Description | Reference |
+| ------- | ----------- | --------- | --------- |
+| [Day_#1](https://github.com/silvermete0r/31github/blob/master/projects/day1.py)  | 🏀 NBA Player Stats Explorer | This app analyzes data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scraping! | Data Professor |
+| [Day_#2](https://github.com/silvermete0r/31github/blob/master/projects/day2.py)  | 📈 Stocks Price Web App | This app retrieves the list of the S&P 500 from Wikipedia and analyzes these companies' stats using yfinance! | Data Professor |
+| [Day_#3](https://github.com/silvermete0r/31github/blob/master/projects/day3.py)  | | | Data Professor |
 
 <!-- LICENSE -->
 ## 🛡️ License
