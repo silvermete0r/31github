@@ -28,10 +28,25 @@ def main():
     st.write('📚 I\'m currently learning `Data Science` and `Machine Learning`.')
     st.write('👨‍💻 All of my projects are available at [my GitHub](https://github.com/silvermete0r)')
 
-    st.subheader('My Projects')    
-    st.write('📊 [Day #1: NBA Player Stats Explorer]()')
-    st.write('📈 [Day #2: Stocks Price Web App]()')
-    
+    st.subheader('My Projects')
+    st.table({
+        'Project': {
+            'Day_#1': '🏀 NBA Player Stats Explorer',
+            'Day_#2': '📈 Stocks Price Web App',
+            'Day_#3': '',
+        },
+        'Description': {
+            'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
+            'Day_#2': 'This app retrieves the list of the S&P 500 from Wikipedia and Analyze this companies stats using yfinance!',
+            'Day_#3': '',
+
+        },
+        'Reference': {
+            'Day_#1': 'Data Professor',
+            'Day_#2': 'Data Professor',
+            'Day_#3': 'Data Professor',
+        },
+    })
 
     st.subheader('Contact Me')
 
@@ -57,10 +72,10 @@ def main():
                 st.error('Something went wrong... Please try again.')
                 st.error(e)
 
-
-    st.write('✈️ Telegram: [@silvermete0r](https://t.me/silvermete0r)')
-    st.write('📷 Instagram: [@grembim](https://www.instagram.com/grembim)')
-    st.write('🔗 Taplink: https://one.link/grembim')
+    col1, col2, col3 = st.columns(3)
+    col1.write('✈️ Telegram: [@silvermete0r](https://t.me/silvermete0r)')
+    col2.write('📷 Instagram: [@grembim](https://www.instagram.com/grembim)')
+    col3.write('🔗 Taplink: [@grembim](https://one.link/grembim)')
 
 # Multipage WebApp Design
 class MultiApp:
