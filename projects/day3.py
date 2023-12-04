@@ -54,7 +54,7 @@ def app():
     colA, colB, colC = st.columns([1, 1, 1])
     
     # 1) Display Text
-    colA.subheader('1) Display Text', divider=True)
+    colA.subheader('1) Display Text')
     colA.code("st.text('It\'s a fixed width text.')", language='python')
     colA.text('It\'s a fixed width text.')
     colA.code("st.markdown(':smile:')", language='python')
@@ -75,9 +75,15 @@ def app():
     colA.code('print(\'Hello, World!\')')
 
     # 2) Display Data
-    colA.subheader('2) Display Data', divider=True)
+    colA.subheader('2) Display Data')
     colA.code("st.dataframe(df[:5])", language='python')
-    df = pd.read_excel('data/tglang_dataset.xlsx', engine='openpyxl')
+
+    @st.cache_data
+    def load_data(url):
+        df = pd.read_excel(url, engine='openpyxl')
+        return df
+    
+    df = load_data('data/tglang_dataset.xlsx')
     colA.dataframe(df[:5])
     colA.code("st.table(df[:5])", language='python')
     colA.table(df[:5])
@@ -87,7 +93,7 @@ def app():
     colA.metric(label='Temperature', value='-23 °C', delta='-5 °C')
 
     # 3) Display Media
-    colA.subheader('3) Display Media', divider=True)
+    colA.subheader('3) Display Media')
     colA.code("st.image('media/streamlit-logo.png', use_column_width=True)", language='python')
     colA.image('media/streamlit-logo.png', use_column_width=True)
     colA.code("st.audio('media/music.mp3', format='audio/mp3')", language='python')
@@ -96,7 +102,7 @@ def app():
     colA.video('media/video.mp4', format='video/mp4')
 
     # 4) Display Columns
-    colA.subheader('4) Display Columns', divider=True)
+    colA.subheader('4) Display Columns')
     colA.code('''
             col1, col2 = st.columns([1, 1])
             with col1:
@@ -115,7 +121,7 @@ def app():
         st.code('def right()')
     
     # 5) Display Tabs
-    colA.subheader('5) Display Tabs', divider=True)
+    colA.subheader('5) Display Tabs')
     colA.code('''
             tab1, tab2, tab3, tab4 = st.tabs(['Fire', 'Water', 'Earth', 'Air'])
             tab1.write('Fire is hot')
@@ -131,7 +137,7 @@ def app():
 
 
     # 6) Control Flow
-    colA.subheader('6) Control Flow', divider=True)
+    colA.subheader('6) Control Flow')
     colA.code('''
             # Stop execution immediately
             st.stop()
@@ -152,7 +158,7 @@ def app():
         st.form_submit_button('Login')  
 
     # 7) Display interactive widgets
-    colB.subheader('7) Display interactive widgets', divider=True)
+    colB.subheader('7) Display interactive widgets')
     colB.code("st.button('Hit me')", language='python')
     colB.button('Hit me')
     colB.code("st.data_editor(df)", language='python')
@@ -194,7 +200,7 @@ def app():
     colB.color_picker('Pick a color')
 
     # 8) Display Progress and Status
-    colB.subheader('8) Display Progress and Status', divider=True)
+    colB.subheader('8) Display Progress and Status')
     colB.code("st.progress(0.3)", language='python')
     colB.progress(0.3)
     colB.code('''
@@ -215,7 +221,7 @@ def app():
         colB.success('Done!')
 
     # 9) Optimize performance
-    colC.subheader('9) Optimize performance', divider=True)
+    colC.subheader('9) Optimize performance')
 
     colC.image('media/cache.png', use_column_width=True)
 
@@ -264,7 +270,7 @@ directly mutate the object in the cache.''')
 
 
     # 10) Display Animations
-    colC.subheader('10) Display Animations', divider=True)
+    colC.subheader('10) Display Animations')
     colC.code("st.balloons()", language='python')
     if colC.button('Give me balloons!'):
         colC.balloons()
