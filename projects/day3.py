@@ -13,6 +13,7 @@ def app():
     - **Streamlit 30 Day Challenge** [[streamlit.io](https://www.streamlit.io/30day-challenge)]
     - **Streamlit Community** [[streamlit.io](https://discuss.streamlit.io/)]
     - **Streamlit Documentation** [[streamlit.io](https://docs.streamlit.io/en/stable/)]
+    @daniellewisdl 
     ''')
 
     colx.subheader('Run Streamlit App via Conda')
@@ -87,8 +88,8 @@ def app():
 
     # 3) Display Media
     colA.subheader('3) Display Media', divider=True)
-    colA.code("st.image('media/streamlit-logo.png', width=300)", language='python')
-    colA.image('media/streamlit-logo.png', width=300)
+    colA.code("st.image('media/streamlit-logo.png', use_column_width=True)", language='python')
+    colA.image('media/streamlit-logo.png', use_column_width=True)
     colA.code("st.audio('media/music.mp3', format='audio/mp3')", language='python')
     colA.audio('media/music.mp3', format='audio/mp3')
     colA.code("st.video('media/video.mp4', format='video/mp4')", language='python')
@@ -215,56 +216,86 @@ def app():
 
     # 9) Optimize performance
     colC.subheader('9) Optimize performance', divider=True)
-    colC.write('Cache Data Objects')
+
+    colC.image('media/cache.png', use_column_width=True)
+
+    colC.markdown('''**Cache Data Objects**\n 
+`st.cache_data` is the recommended way to cache computations that return data: 
+loading a DataFrame from CSV, transforming a NumPy array, querying an API, 
+or any other function that returns a serializable data object (str, int, float, 
+DataFrame, array, list, …). It creates a new copy of the data at each function 
+call, making it safe against mutations and race conditions. The behavior of 
+`st.cache_data` is what you want in most cases – so if you\'re unsure, start 
+with `st.cache_data` and see if it works!''')
+    
     colC.code('''
-            # E.g. Dataframe computation, storing downloaded data, etc.
-            >>> @st.cache_data
-            ... def foo(bar):
-            ...   # Do something expensive and return data
-            ...   return data
-            # Executes foo
-            >>> d1 = foo(ref1)
-            # Does not execute foo
-            # Returns cached item by value, d1 == d2
-            >>> d2 = foo(ref1)
-            # Different arg, so function foo executes
-            >>> d3 = foo(ref2)
-            # Clear all cached entries for this function
-            >>> foo.clear()
-            # Clear values from *all* in-memory or on-disk cached functions
-            >>> st.cache_data.clear()
+            @st.cache_data  # 👈 Add the caching decorator
+            def load_data(url):
+                df = pd.read_csv(url)
+                return df
+
+            df = load_data("https://github.com/plotly/datasets/raw/master/uber-rides-data1.csv")
+            st.dataframe(df)
+
+            st.button("Rerun")
             ''', language='python')
-    colC.write('Cache Global Resources')
+    
+    colC.markdown('''**Cache Global Resources**\n 
+`st.cache_resource` is the recommended way to cache global resources like ML models 
+or database connections – unserializable objects that you don't want to load multiple 
+times. Using it, you can share these resources across all reruns and sessions of an 
+app without copying or duplication. Note that any mutations to the cached return value 
+directly mutate the object in the cache.''')
+    
     colC.code('''
-            # E.g. TensorFlow session, database connection, etc.
-            >>> @st.cache_resource
-            ... def foo(bar):
-            ...   # Create and return a non-data object
-            ...   return session
-            # Executes foo
-            >>> s1 = foo(ref1)
-            # Does not execute foo
-            # Returns cached item by reference, s1 == s2
-            >>> s2 = foo(ref1)
-            # Different arg, so function foo executes
-            >>> s3 = foo(ref2)
-            # Clear all cached entries for this function
-            >>> foo.clear()
-            # Clear all global resources from cache
-            >>> st.cache_resource.clear()
-            ''', language='python')
-    colC.write('Deprecated caching')
-    colC.code('''
-            >>> @st.cache
-            ... def foo(bar):
-            ...   # Do something expensive in here...
-            ...   return data
-            >>> # Executes foo
-            >>> d1 = foo(ref1)
-            >>> # Does not execute foo
-            >>> # Returns cached item by reference, d1 == d2
-            >>> d2 = foo(ref1)
-            >>> # Different arg, so function foo executes
-            >>> d3 = foo(ref2)
+            from transformers import pipeline
+
+            @st.cache_resource  # 👈 Add the caching decorator
+            def load_model():
+                return pipeline("sentiment-analysis")
+
+            model = load_model()
+
+            query = st.text_input("Your query", value="I love Streamlit! 🎈")
+            if query:
+                result = model(query)[0]  # 👈 Classify the query text
+                st.write(result)
             ''', language='python')
 
+
+    # 10) Display Animations
+    colC.subheader('10) Display Animations', divider=True)
+    colC.code("st.balloons()", language='python')
+    if colC.button('Give me balloons!'):
+        colC.balloons()
+    colC.code("st.snow()", language='python')
+    if colC.button('Let it snow!'):
+        colC.snow()
+    colC.code("st.toast('Here is your toast!')", language='python')
+    if colC.button('Give me a toast!'):
+        st.toast('Here is your toast!')
+    colC.code("st.success('Here is your success!')", language='python')
+    if colC.button('Give me a success!'):
+        colC.success('Here is your success!')
+    colC.code("st.info('Here is your info!')", language='python')
+    if colC.button('Give me a info!'):
+        colC.info('Here is your info!')
+    colC.code("st.warning('Here is your warning!')", language='python')
+    if colC.button('Give me a warning!'):
+        colC.warning('Here is your warning!')
+    colC.code("st.error('Here is your error!')", language='python')
+    if colC.button('Give me a error!'):
+        colC.error('Here is your error!')
+    colC.code("st.exception('Here is your exception!')", language='python')
+    if colC.button('Give me a exception!'):
+        colC.exception('Here is your exception!')
+    colC.code('''
+              with st.spinner('Wait for it...')
+                time.sleep(5)
+                st.success('Done!')
+              ''', language='python')
+    if colC.button('Give me a spinner!'):
+        colC.info('Go down to see the spinner!')
+        with st.spinner('Wait for it...'):
+            time.sleep(5)
+            st.success('Done!')
