@@ -12,7 +12,7 @@ def app():
     st.markdown("""
     This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!
     * **Python modules:** base64, pandas, streamlit.
-    * **Data source:** [Basketball-reference.com](https://www.basketball-reference.com/).
+    * **Data source:** [Basketball-reference.com](https://www.basketball-reference.com/)
     * **Reference:** [Data Professor](https://github.com/dataprofessor)
     """)
 

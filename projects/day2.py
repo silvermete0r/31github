@@ -12,7 +12,7 @@ def app():
     st.markdown("""
     This app retrieves the list of the **S&P 500** from Wikipedia and Analyze this companies stats using **yfinance**!
     * **Python modules:** base64, pandas, streamlit.
-    * **Data source:** [Wikipedia](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies).
+    * **Data source:** [Wikipedia](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies)
     * **Reference:** [Data Professor](https://github.com/dataprofessor)
     """)
 
