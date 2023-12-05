@@ -15,7 +15,8 @@ from sklearn.model_selection import train_test_split
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 from sklearn.datasets import load_wine, load_diabetes, load_breast_cancer, load_iris
-import joblib
+import pickle
+import base64
 
 # Ignore warnings
 import warnings
@@ -43,11 +44,12 @@ def draw_numeric_distplot(df, plots_per_line = 3):
         return
     for i in range(0, len(num_cols), plots_per_line):
         fig, axes = plt.subplots(1, plots_per_line, figsize=(15, 5))
-        for j in range(plots_per_line):
-            if i + j < len(num_cols):
-                sns.distplot(df[num_cols[i + j]], ax=axes[j])
-                axes[j].set_title(num_cols[i + j])
-        st.pyplot(fig)
+        with st.spinner('Generating Distributive Plots...'):
+            for j in range(plots_per_line):
+                if i + j < len(num_cols):
+                    sns.distplot(df[num_cols[i + j]], ax=axes[j])
+                    axes[j].set_title(num_cols[i + j])
+            st.pyplot(fig)
 
 def draw_categorical_distplot(df, plots_per_line = 3):
     cat_cols = df.select_dtypes(include='object').columns.tolist()
@@ -56,15 +58,19 @@ def draw_categorical_distplot(df, plots_per_line = 3):
         return
     for i in range(0, len(cat_cols), plots_per_line):
         fig, axes = plt.subplots(1, plots_per_line, figsize=(15, 5))
-        for j in range(plots_per_line):
-            if i + j < len(cat_cols):
-                sns.countplot(x=cat_cols[i + j], data=df, ax=axes[j])
-                axes[j].set_title(cat_cols[i + j])
-                axes[j].tick_params(axis='x', rotation=45)
-        st.pyplot(fig)
+        with st.spinner('Generating Count Plots...'):
+            for j in range(plots_per_line):
+                if i + j < len(cat_cols):
+                    sns.countplot(x=cat_cols[i + j], data=df, ax=axes[j])
+                    axes[j].set_title(cat_cols[i + j])
+                    axes[j].tick_params(axis='x', rotation=45)
+            st.pyplot(fig)
 
-def save_model(model, filename='xgboost_model.joblib'):
-    joblib.dump(model, filename)
+def download_model(model):
+    output_model = pickle.dumps(model)
+    b64 = base64.b64encode(output_model).decode()
+    href = f'<a href="data:file/output_model;base64,{b64}" download="xgbr_model.pkl">Download `xgbr_model.pkl` File</a>'
+    st.markdown(href, unsafe_allow_html=True)
 
 def build_model(df, params, target, features, split_size):
     X = df[features]
@@ -98,10 +104,20 @@ def build_model(df, params, target, features, split_size):
     st.markdown(f'* R-squared Score: `{r2}`')
     st.markdown(f'* Mean Absolute Error: `{mae}`')
 
+
+    st.subheader('6. Model Parameters')
+    st.write(model.get_params())
+
 def app():
     st.title('Day #4')
-    st.subheader('No Code Machine Learning Web App based on XGBoostRegressor')
-    
+    st.subheader('No-Code ML Web App based on XGBoostRegressor')
+    st.markdown("""
+        This app provides a no-code web interface to use XGBoostRegressor for training & testing Machine Learning Models based on various datasets.
+        * **Libraries:** `streamlit`, `pandas`, `numpy`, `matplotlib`, `seaborn`, `sklearn`, `xgboost`, `pickle`, `base64`
+        * **Data Source:** scikit-learn datasets
+        * **Reference:** [Data Professor](https://github.com/dataprofessor)
+    """)
+
     # Load data caching
     @st.cache_data
     def load_data(file):
@@ -153,7 +169,8 @@ def app():
     if df is not None:
         st.subheader('3. Exploratory Data Analysis')
         st.markdown('**2.6. Correlation Matrix Heatmap**')
-        draw_heatmap(df)
+        with st.spinner('Generating Correlation Matrix Heatmap...'):
+            draw_heatmap(df)
         st.markdown('**2.7. Distribution of Numerical Columns**')
         draw_numeric_distplot(df)
         st.markdown('**2.8. Distribution of Categorical Columns**')
@@ -184,11 +201,8 @@ def app():
             best_model = build_model(df, params, target, features, split_size)
         st.snow()
         st.success('Model has been built successfully!')
-        st.subheader('6. Download Model as Pickle File')
-        if st.button('Download Model'):
-            save_model(best_model, 'xgboost_model.joblib')
-            st.info('Model has been saved as `xgboost_model.joblib`')
-
+        st.subheader('7. Download Model as Pickle File')
+        st.markdown(download_model(best_model), unsafe_allow_html=True)
 
 
     

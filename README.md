@@ -33,7 +33,8 @@
 | [Day_#1](https://github.com/silvermete0r/31github/blob/master/projects/day1.py)  | 🏀 NBA Player Stats Explorer | This app analyzes data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scraping! | Data Professor |
 | [Day_#2](https://github.com/silvermete0r/31github/blob/master/projects/day2.py)  | 📈 Stocks Price Web App | This app retrieves the list of the S&P 500 from Wikipedia and analyzes these companies' stats using yfinance! | Data Professor |
 | [Day_#3](https://github.com/silvermete0r/31github/blob/master/projects/day3.py)  | 🧰 Streamlit Toolkit | This app provides fully-explained useful cheatsheet for Streamlit Framework! | Streamlit Docs |
-| [Day_#4](https://github.com/silvermete0r/31github/blob/master/projects/day4.py)  |  |  |  |
+| [Day_#4](https://github.com/silvermete0r/31github/blob/master/projects/day4.py)  | 💎 No-Code ML Web App based on XGBoostRegressor | This app provides a no-code web interface to use XGBoostRegressor for training & testing Machine Learning Models based on various datasets. | Data Professor |
+| [Day_#5](https://github.com/silvermete0r/31github/blob/master/projects/day5.py)  |  |  |  |
 
 <!-- LICENSE -->
 ## 🛡️ License

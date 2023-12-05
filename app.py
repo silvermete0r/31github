@@ -34,19 +34,22 @@ def main():
             'Day_#1': '🏀 NBA Player Stats Explorer',
             'Day_#2': '📈 Stocks Price Web App',
             'Day_#3': '🧰 Streamlit Toolkit',
-            'Day_#4': '',
+            'Day_#4': '💎 No-Code ML Web App based on XGBoostRegressor',
+            'Day_#5': '',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
             'Day_#2': 'This app retrieves the list of the S&P 500 from Wikipedia and Analyze this companies stats using yfinance!',
             'Day_#3': 'This app provides fully-explained useful cheatsheet for Streamlit Framework!',
-            'Day_#4': '',
+            'Day_#4': 'This app provides a no-code web interface to use XGBoostRegressor for training & testing Machine Learning Models based on various datasets.',
+            'Day_#5': '',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
             'Day_#2': 'Data Professor',
             'Day_#3': 'Streamlit Docs',
-            'Day_#4': '',
+            'Day_#4': 'Data Professor',
+            'Day_#5': '',
         },
     })
 
