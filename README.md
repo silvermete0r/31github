@@ -34,7 +34,8 @@
 | [Day_#2](https://github.com/silvermete0r/31github/blob/master/projects/day2.py)  | 📈 Stocks Price Web App | This app retrieves the list of the S&P 500 from Wikipedia and analyzes these companies' stats using yfinance! | Data Professor |
 | [Day_#3](https://github.com/silvermete0r/31github/blob/master/projects/day3.py)  | 🧰 Streamlit Toolkit | This app provides fully-explained useful cheatsheet for Streamlit Framework! | Streamlit Docs |
 | [Day_#4](https://github.com/silvermete0r/31github/blob/master/projects/day4.py)  | 💎 No-Code ML Web App based on XGBoostRegressor | This app provides a no-code web interface to use XGBoostRegressor for training & testing Machine Learning Models based on various datasets. | Data Professor |
-| [Day_#5](https://github.com/silvermete0r/31github/blob/master/projects/day5.py)  |  |  |  |
+| [Day_#5](https://github.com/silvermete0r/31github/blob/master/projects/day5.py)  | 🗃️ Excel & CSV Files Multi Merger | This app merges multiple excel & csv files into one file. | Data Professor |
+| [Day_#6](https://github.com/silvermete0r/31github/blob/master/projects/day6.py)  |  |  |  |
 
 <!-- LICENSE -->
 ## 🛡️ License
