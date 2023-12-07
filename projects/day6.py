@@ -7,12 +7,13 @@ def app():
     st.title('Day #6')
     st.subheader('Machine Leraning Model Performance Calculator App')
     st.markdown('''
-        This app evaluates the performance of machine learning models using various metrics & visualizations.
+        This app evaluates the performance of machine learning models using various metrics.
         
         * **Python libraries:** `streamlit`, `pandas`, `sklearn`, `base64`.
         
         * **Reference:** [Data Professor](https://github.com/dataprofessor)
 
+        * *Provided CSV file must contain only 2 columns `predicted` and `actual`.*
         ---
     ''')
 
