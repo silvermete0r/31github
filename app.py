@@ -37,7 +37,8 @@ def main():
             'Day_#4': '💎 No-Code ML Web App based on XGBoostRegressor',
             'Day_#5': '🗃️ Excel & CSV Files Multi Merger',
             'Day_#6': '📊 Machine Learning Model Performance Calculator',
-            'Day_#7': '',
+            'Day_#7': '🖼️ Image Quality Enhancement Web App',
+            'Day_#8': '',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
@@ -46,7 +47,8 @@ def main():
             'Day_#4': 'This app provides a no-code web interface to use XGBoostRegressor for training & testing Machine Learning Models based on various datasets.',
             'Day_#5': 'This app merges multiple excel & csv files into one file.',
             'Day_#6': 'This app evaluates the performance of machine learning models using various metrics.',
-            'Day_#7': '',
+            'Day_#7': 'This app enhances the quality of an image using various techniques.',
+            'Day_#8': '',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
@@ -55,7 +57,8 @@ def main():
             'Day_#4': 'Data Professor',
             'Day_#5': 'Data Professor',
             'Day_#6': 'Data Professor',
-            'Day_#7': '',
+            'Day_#7': 'OpenCV Docs',
+            'Day_#8': '',
         },
     })
 

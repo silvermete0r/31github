@@ -4,7 +4,7 @@ import cv2
 
 def app():
     st.title('Day #7')
-    st.subheader('Image Quality Enhancement WebApp')
+    st.subheader('Image Quality Enhancement Web App')
     st.markdown("""
         This app enhances the quality of an image using various techniques. The techniques are listed below:
         - Sharpening

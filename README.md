@@ -36,7 +36,8 @@
 | [Day_#4](https://github.com/silvermete0r/31github/blob/master/projects/day4.py)  | 💎 No-Code ML Web App based on XGBoostRegressor | This app provides a no-code web interface to use XGBoostRegressor for training & testing Machine Learning Models based on various datasets. | Data Professor |
 | [Day_#5](https://github.com/silvermete0r/31github/blob/master/projects/day5.py)  | 🗃️ Excel & CSV Files Multi Merger | This app merges multiple excel & csv files into one file. | Data Professor |
 | [Day_#6](https://github.com/silvermete0r/31github/blob/master/projects/day6.py)  | 📊 Machine Learning Model Performance Calculator | This app evaluates the performance of machine learning models using various metrics. | Data Professor |
-| [Day_#7](https://github.com/silvermete0r/31github/blob/master/projects/day7.py)  |  |  |  |
+| [Day_#7](https://github.com/silvermete0r/31github/blob/master/projects/day7.py)  | 🖼️ Image Quality Enhancement Web App | This app enhances the quality of an image using various techniques. | OpenCV Docs |
+| [Day_#8](https://github.com/silvermete0r/31github/blob/master/projects/day8.py)  |  |  |  |
 
 <!-- LICENSE -->
 ## 🛡️ License
