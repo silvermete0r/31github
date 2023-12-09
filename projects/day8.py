@@ -6,11 +6,11 @@ def app():
     st.title('Day #8')
     st.subheader('Github Profile Data Analyzer Web App')
     st.markdown("""
-        This app retrieves the list of repositories of any Github profile and displays the repository name, the number of stars and the language used in the repository.
+        This app analyzes the data of any Github profile using Github API.
         
         * **Python libraries:** `streamlit`, `requests`, `datetime`
         
-        * **Data source:** [Github API](https://docs.github.com/en/rest)
+        * **Data source:** [Github API Docs](https://docs.github.com/en/rest)
     
         ---
     """)
