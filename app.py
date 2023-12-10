@@ -39,7 +39,8 @@ def main():
             'Day_#6': '📊 Machine Learning Model Performance Calculator',
             'Day_#7': '🖼️ Image Quality Enhancement Web App',
             'Day_#8': '😺 Github Profile Data Analyzer Web App',
-            'Day_#9': '',
+            'Day_#9': '🧑 Face Recognition Web App',
+            'Day_#10': '',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
@@ -50,7 +51,8 @@ def main():
             'Day_#6': 'This app evaluates the performance of machine learning models using various metrics.',
             'Day_#7': 'This app enhances the quality of an image using various techniques.',
             'Day_#8': 'This app analyzes the data of any Github profile using Github API.',
-            'Day_#9': '',
+            'Day_#9': 'This app detects faces in uploaded images using `face_recognition` library.',
+            'Day_#10': '',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
@@ -61,7 +63,8 @@ def main():
             'Day_#6': 'Data Professor',
             'Day_#7': 'OpenCV Docs',
             'Day_#8': 'Github API Docs',
-            'Day_#9': '',
+            'Day_#9': 'Face Recognition Docs',
+            'Day_#10': '',
         },
     })
 

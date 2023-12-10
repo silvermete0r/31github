@@ -38,7 +38,8 @@
 | [Day_#6](https://github.com/silvermete0r/31github/blob/master/projects/day6.py)  | 📊 Machine Learning Model Performance Calculator | This app evaluates the performance of machine learning models using various metrics. | Data Professor |
 | [Day_#7](https://github.com/silvermete0r/31github/blob/master/projects/day7.py)  | 🖼️ Image Quality Enhancement Web App | This app enhances the quality of an image using various techniques. | OpenCV Docs |
 | [Day_#8](https://github.com/silvermete0r/31github/blob/master/projects/day8.py)  | 😺 Github Profile Data Analyzer Web App | This app analyzes the data of any Github profile using Github API. | Github API Docs |
-| [Day_#9](https://github.com/silvermete0r/31github/blob/master/projects/day9.py)  |  |  |  |
+| [Day_#9](https://github.com/silvermete0r/31github/blob/master/projects/day9.py)  | 🧑 Face Recognition Web App | This app detects faces in uploaded images using `face_recognition` library. | Face Recognition Docs |
+| [Day_#10](https://github.com/silvermete0r/31github/blob/master/projects/day10.py)  |  |  |  |
 
 <!-- LICENSE -->
 ## 🛡️ License
