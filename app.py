@@ -41,7 +41,8 @@ def main():
             'Day_#8': '😺 Github Profile Data Analyzer Web App',
             'Day_#9': '🧑 Face Recognition Web App',
             'Day_#10': '💡 Multi-Object Classifier Web App',
-            'Day_#11': '',
+            'Day_#11': '👾 Tensorflow Image Classification DL Model Training Baseline',
+            'Day_#12': '',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
@@ -54,7 +55,8 @@ def main():
             'Day_#8': 'This app analyzes the data of any Github profile using Github API.',
             'Day_#9': 'This app detects faces in uploaded images using Haar Cascades.',
             'Day_#10': 'This app predicts the class of different objects in an image using a pre-trained MobileNetV2 model.',
-            'Day_#11': '',
+            'Day_#11': 'This app trains a simple CNN model on the MNIST dataset using Tensorflow.',
+            'Day_#12': '',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
@@ -67,7 +69,8 @@ def main():
             'Day_#8': 'Github API Docs',
             'Day_#9': 'OpenCV Haar Cascades',
             'Day_#10': 'MobileNetV2',
-            'Day_#11': '',
+            'Day_#11': 'Tensorflow Guide',
+            'Day_#12': '',
         },
     })
 
