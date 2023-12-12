@@ -1,17 +1,16 @@
 import streamlit as st
 import tensorflow as tf
 import keras
-
-# Main Functions
-def show_images_sample(x_train, st):
-    col1, col2, col3, col4, col5 = st.columns(5)
-    for i in range(5):
-        eval(f'col{i+1}').image(x_train[i], width=150)
+import time
 
 '''
 # Load MNIST Dataset
 mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+# Show 5 Images
+for i in range(5):
+    st.image(x_train[i], use_column_width=True)
 
 # Data Preprocessing
 x_train, x_test = x_train / 255.0, x_test / 255.0
@@ -73,6 +72,12 @@ def app():
         st.image('media/tf-architecture.png', use_column_width=True)
     st.write('---')
 
+    # Evaluation Results
+    eval_results = {
+        'loss': 0.074,
+        'accuracy': 0.977
+    }
+
     ##############################
     # Step-1: Install Tensorflow #
     ##############################
@@ -81,8 +86,10 @@ def app():
         pip install tensorflow
     """, language='python')
     if st.button('Install Tensorflow'):
-        st.success('Tensorflow Installed!')
-        st.write('---')
+        with st.spinner('Installing Tensorflow...'):
+            time.sleep(1)
+            st.success('Tensorflow Installed!')
+    st.write('---')
 
     ##############################
     # Step-2: Load MNIST Dataset #
@@ -93,8 +100,14 @@ def app():
         (x_train, y_train), (x_test, y_test) = mnist.load_data()
     """, language='python')
     if st.button('Load Dataset'):
-        st.success('Dataset Loaded!')
-        st.write('---')
+        with st.spinner('Loading Dataset...'):
+            time.sleep(1.5)
+            st.success('Dataset Loaded!')
+            st.caption('Sample Images:')
+            col1, col2, col3, col4, col5 = st.columns(5)
+            for idx, img_id in enumerate((0, 1, 4, 5, 9)):
+                eval(f'col{idx+1}').image(f'media/digit-{img_id}.jpg', use_column_width=True)
+    st.write('---')
 
     ##############################
     # Step-3: Data Preprocessing #
@@ -104,8 +117,10 @@ def app():
         x_train, x_test = x_train / 255.0, x_test / 255.0
     """, language='python')
     if st.button('Preprocess Data'):
-        st.success('Data Preprocessed!')
-        st.write('---')
+        with st.spinner('Preprocessing Data...'):
+            time.sleep(1)
+            st.success('Data Preprocessed!')
+    st.write('---')
 
     #######################
     # Step-4: Build Model #
@@ -130,8 +145,10 @@ def app():
             * **Output layer** with 10 neurons for classification of input images as one of ten digits (0-9).
         """)
     if st.button('Build Model'):
-        st.success('Model Built!')
-        st.write('---')
+        with st.spinner('Building Model...'):
+            time.sleep(1)
+            st.success('Model Built!')
+    st.write('---')
     
     #########################
     # Step-5: Compile Model #
@@ -148,9 +165,11 @@ def app():
             * **Metrics** are used to monitor the training and testing steps.
         """)
     if st.button('Compile Model'):
-        st.success('Model Compiled!')
-        st.write('---')
-    
+        with st.spinner('Compiling Model...'):
+            time.sleep(1.5)
+            st.success('Model Compiled!')
+    st.write('---')
+        
     #######################
     # Step-6: Train Model #
     #######################
@@ -164,8 +183,10 @@ def app():
             * **1 Epoch** is when an entire dataset is passed both forward and backward through the neural network only once.
         """)
     if st.button('Train Model'):
-        st.success('Model Trained!')
-        st.write('---')
+        with st.spinner('Training Model...'):
+            time.sleep(2.5)
+            st.success('Model Trained!')
+    st.write('---')
     
     ##########################
     # Step-7: Evaluate Model #
@@ -175,9 +196,13 @@ def app():
         model.evaluate(x_test, y_test, verbose=2)
     """, language='python')
     if st.button('Evaluate Model'):
-        st.success('Congratulations! You have successfully trained a simple CNN model on the MNIST dataset using Tensorflow!')
-        st.balloons()
-        st.write('---')
+        # st spinner for 2 seconds
+        with st.spinner('Evaluating Model...'):
+            time.sleep(1)
+            st.write(eval_results)
+            st.success('Congratulations! You have successfully trained a simple CNN model on the MNIST dataset using Tensorflow!')
+            st.balloons()
+    st.write('---')
     
     ##################################
     # Step-8: Download Trained Model #
@@ -187,5 +212,6 @@ def app():
         model.save('models/day11.h5')
     """, language='python')
     if st.download_button('Download Model', 'models/day11.h5'):
-        st.success('Model Downloaded!')
+        with st.spinner('Downloading Model...'):
+            st.success('Model Downloaded!')
     st.write('---')
