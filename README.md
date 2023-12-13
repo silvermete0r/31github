@@ -41,7 +41,8 @@
 | [Day_#9](https://github.com/silvermete0r/31github/blob/master/projects/day9.py)  | 🧑 Face Recognition Web App | This app detects faces in uploaded images using Haar Cascades. | OpenCV Haar Cascades |
 | [Day_#10](https://github.com/silvermete0r/31github/blob/master/projects/day10.py)  | 💡 Multi-Object Classifier Web App | This app predicts the class of different objects in an image using a pre-trained MobileNetV2 model. | MobileNetV2 |
 | [Day_#11](https://github.com/silvermete0r/31github/blob/master/projects/day11.py)  | 👾 Tensorflow Image Classification DL Model Training Baseline | This app trains a simple CNN model on the MNIST dataset using Tensorflow. | Tensorflow Guide |
-| [Day_#12](https://github.com/silvermete0r/31github/blob/master/projects/day12.py)  |  |  |  |
+| [Day_#12](https://github.com/silvermete0r/31github/blob/master/projects/day12.py)  | 🌸 Tensorflow Simple Iris Classification App | This app demonstrates a simple TensorFlow Iris classification model using the Sklearn Iris dataset. | Tensorflow Guide |
+| [Day_#13](https://github.com/silvermete0r/31github/blob/master/projects/day13.py)  |  |  |  |
 
 <!-- LICENSE -->
 ## 🛡️ License
