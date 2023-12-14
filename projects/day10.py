@@ -43,7 +43,8 @@ def classify_object(image):
         
 # Main App Logic
 def app():
-    st.title('Multi-Object Classifier Web App')
+    st.title('Day #10')
+    st.subheader('Multi-Object Classifier Web App')
     st.markdown("""
         This app predicts the class of different objects in an image using a pre-trained MobileNetV2 model.
         

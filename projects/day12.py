@@ -124,4 +124,4 @@ def app():
             })
         with st.spinner('Drawing performance chart...'):
             draw_performance_chart(history)
-            st.success('Work complete!')
+            st.success('Work completed!')
