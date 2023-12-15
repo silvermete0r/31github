@@ -6,4 +6,4 @@ textColor="#ffffff"
 font="sans serif"
 
 [deprecation]
-showPyplotGlobalUse = false
+showPyplotGlobalUse=false
