@@ -43,7 +43,8 @@
 | [Day_#11](https://github.com/silvermete0r/31github/blob/master/projects/day11.py)  | 👾 Tensorflow Image Classification DL Model Training Baseline | This app trains a simple CNN model on the MNIST dataset using Tensorflow. | Tensorflow Guide |
 | [Day_#12](https://github.com/silvermete0r/31github/blob/master/projects/day12.py)  | 🌸 Tensorflow Simple Iris Classification App | This app demonstrates a simple TensorFlow Iris classification model using the Sklearn Iris dataset. | Tensorflow Guide |
 | [Day_#13](https://github.com/silvermete0r/31github/blob/master/projects/day13.py)  | 🏠 Tensorflow Regression Model Training Based on Boston Housing Dataset | This app demonstrates a simple Tensorflow regression model using the Boston Housing dataset. | Tensorflow Guide |
-| [Day_#14](https://github.com/silvermete0r/31github/blob/master/projects/day14.py)  |  |  |  |
+| [Day_#14](https://github.com/silvermete0r/31github/blob/master/projects/day14.py)  | 📝 Text Summarization using HuggingFace Transformers | This app is a simple text summarization app using HuggingFace Transformers. | HuggingFace Transformers |
+| [Day_#15](https://github.com/silvermete0r/31github/blob/master/projects/day15.py)  |  |  |  |
 
 <!-- LICENSE -->
 ## 🛡️ License
