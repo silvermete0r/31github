@@ -45,7 +45,9 @@ def main():
             'Day_#12': '🌸 Tensorflow Simple Iris Classification App',
             'Day_#13': '🏠 Tensorflow Regression Model Training Based on Boston Housing Dataset',
             'Day_#14': '📝 Text Summarization using HuggingFace Transformers',
-            'Day_#15': '',
+            'Day_#15': '📝 Text Sentiment Analysis using HuggingFace Transformers',
+            'Day_#16': '📝 Text Completion using HuggingFace Transformers',
+            'Day_#17': '',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
@@ -62,7 +64,9 @@ def main():
             'Day_#12': 'This app demonstrates a simple TensorFlow Iris classification model using the Sklearn Iris dataset.',
             'Day_#13': 'This app demonstrates a simple Tensorflow regression model using the Boston Housing dataset.',
             'Day_#14': 'This app is a simple text summarization app using HuggingFace Transformers.',
-            'Day_#15': '',
+            'Day_#15': 'This app is a simple text sentiment analysis app using `BERT` model from HuggingFace Transformers.',
+            'Day_#16': 'This app is a simple text completion app using GPT-2 model from HuggingFace Transformers.',
+            'Day_#17': '',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
@@ -79,7 +83,9 @@ def main():
             'Day_#12': 'Tensorflow Guide',
             'Day_#13': 'Tensorflow Guide',
             'Day_#14': 'HuggingFace Transformers',
-            'Day_#15': '',
+            'Day_#15': 'HuggingFace Transformers',
+            'Day_#16': 'HuggingFace Transformers',
+            'Day_#17': '',
         },
     })
 

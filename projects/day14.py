@@ -35,7 +35,7 @@ def app():
     st.title('Day #14')
     st.subheader('Text Summarization using HuggingFace Transformers')   
     st.markdown("""
-        This app is a simple text summarization app using HuggingFace Transformers.
+        This app is a simple text summarization app using `BART` model from HuggingFace Transformers.
         
         The model used is `facebook/bart-large-cnn` which is a BART model fine-tuned on CNN/DailyMail dataset.
         
@@ -61,5 +61,5 @@ def app():
             summary_text = ' '.join([summ['summary_text'] for summ in summary])
         st.markdown('### Output')
         st.write(summary_text)
-        st.success('Summarization Successful!')
+        st.success('Done!')
     
