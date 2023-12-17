@@ -86,5 +86,3 @@ def app():
             st.subheader('Stock Closing Price')
             for i in list(df_final_selected.Symbol)[:num_company]:
                 price_plot(i)
-
-        

@@ -49,17 +49,20 @@ def app():
     text = st.text_area('Text', height=300)
     max_length = st.slider('Max Length', 100, 500, 200)
     min_length = st.slider('Min Length', 10, 100, 30)
-    if text == '':
-        st.warning('Please enter some text for summarization')
-    if max_length <= min_length:
-        st.warning('Max Length should be greater than Min Length')
+
     if st.button('Summarize'):
         with st.spinner('Summarizing...'):
-            model = load_model()
-            chunks = generate_chunks(text)
-            summary = model(chunks, max_length=max_length, min_length=min_length)
-            summary_text = ' '.join([summ['summary_text'] for summ in summary])
-        st.markdown('### Output')
-        st.write(summary_text)
-        st.success('Done!')
+            if text == '':
+                st.warning('Please enter some text for summarization')
+            elif max_length <= min_length:
+                st.warning('Max Length should be greater than Min Length')
+            else:
+                with st.spinner('Summarizing...'):
+                    model = load_model()
+                    chunks = generate_chunks(text)
+                    summary = model(chunks, max_length=max_length, min_length=min_length)
+                    summary_text = ' '.join([summ['summary_text'] for summ in summary])
+                st.markdown('### Output')
+                st.write(summary_text)
+                st.success('Done!')
     

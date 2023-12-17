@@ -20,12 +20,13 @@ def app():
     
     st.markdown('### Input Text for Sentiment Analysis')
     text = st.text_area('Text', height=200)
-    if text == '':
-        st.warning('Please enter some text for sentiment analysis')
     if st.button('Analyze'):
-        with st.spinner('Analyzing...'):
-            model = load_model()
-            result = model(text)
-        st.markdown('### Output')
-        st.write(result)
-        st.success('Done!')
+        if text == '':
+            st.warning('Please enter some text for sentiment analysis')
+        else:
+            with st.spinner('Analyzing...'):
+                model = load_model()
+                result = model(text)
+            st.markdown('### Output')
+            st.write(result)
+            st.success('Done!')

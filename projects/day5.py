@@ -80,6 +80,3 @@ def app():
                 colB.markdown(xldownload(df), unsafe_allow_html=True)
         else:
             st.info('Awaiting for ZIP file to be uploaded.')
-
-
-

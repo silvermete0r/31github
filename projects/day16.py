@@ -20,13 +20,13 @@ def app():
 
     st.markdown('### Input Text for Completion')
     text = st.text_area('Enter Text', height=200)
-    if text == '':
-        st.warning('Please enter some text for completion')
     if st.button('Complete'):
-        with st.spinner('Completing...'):
-            model = load_model()
-            completed_text = model(text)
-        st.markdown('### Output')
-        st.write(completed_text)
-        st.success('Done!')
-
+        if text == '':
+            st.warning('Please enter some text for completion')
+        else:
+            with st.spinner('Completing...'):
+                model = load_model()
+                completed_text = model(text)
+            st.markdown('### Output')
+            st.write(completed_text)
+            st.success('Done!')

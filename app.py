@@ -47,7 +47,8 @@ def main():
             'Day_#14': '📝 Text Summarization using HuggingFace Transformers',
             'Day_#15': '📝 Text Sentiment Analysis using HuggingFace Transformers',
             'Day_#16': '📝 Text Completion using HuggingFace Transformers',
-            'Day_#17': '',
+            'Day_#17': '📝 Named Entity Recognition (NER) using BERT model from HuggingFace',
+            'Day_#18': '',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
@@ -66,7 +67,8 @@ def main():
             'Day_#14': 'This app is a simple text summarization app using HuggingFace Transformers.',
             'Day_#15': 'This app is a simple text sentiment analysis app using `BERT` model from HuggingFace Transformers.',
             'Day_#16': 'This app is a simple text completion app using GPT-2 model from HuggingFace Transformers.',
-            'Day_#17': '',
+            'Day_#17': 'This app helps to identify the entities in a given text. The `bert-base-NER` model used from HuggingFace.',
+            'Day_#18': '',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
@@ -85,7 +87,8 @@ def main():
             'Day_#14': 'HuggingFace Transformers',
             'Day_#15': 'HuggingFace Transformers',
             'Day_#16': 'HuggingFace Transformers',
-            'Day_#17': '',
+            'Day_#17': 'HuggingFace Transformers',
+            'Day_#18': '',
         },
     })
 

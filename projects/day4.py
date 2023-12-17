@@ -203,6 +203,3 @@ def app():
         st.success('Model has been built successfully!')
         st.subheader('7. Download Model as Pickle File')
         st.markdown(download_model(best_model), unsafe_allow_html=True)
-
-
-    
