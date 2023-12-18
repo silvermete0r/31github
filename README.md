@@ -47,7 +47,8 @@
 | [Day_#15](https://github.com/silvermete0r/31github/blob/master/projects/day15.py)  | 📝 Text Sentiment Analysis using HuggingFace Transformers | This app is a simple text sentiment analysis app using `BERT` model from HuggingFace Transformers. | HuggingFace Transformers |
 | [Day_#16](https://github.com/silvermete0r/31github/blob/master/projects/day16.py)  | 📝 Text Completion using HuggingFace Transformers | This app is a simple text completion app using GPT-2 model from HuggingFace Transformers. | HuggingFace Transformers |
 | [Day_#17](https://github.com/silvermete0r/31github/blob/master/projects/day17.py)  | 📝 Named Entity Recognition (NER) using BERT model from HuggingFace | This app helps to identify the entities in a given text. The `bert-base-NER` model used from HuggingFace. | HuggingFace Transformers |
-| [Day_#18](https://github.com/silvermete0r/31github/blob/master/projects/day18.py)  |  |  |  |
+| [Day_#18](https://github.com/silvermete0r/31github/blob/master/projects/day18.py)  | 📝 Text English to French Language Translation App | This app uses the `Helsinki-NLP/opus-mt-en-fr` model to translate English text to French. | HuggingFace Transformers |
+| [Day_#19](https://github.com/silvermete0r/31github/blob/master/projects/day19.py)  |  |  |  |
 
 <!-- LICENSE -->
 ## 🛡️ License
