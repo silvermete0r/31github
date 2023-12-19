@@ -49,7 +49,8 @@ def main():
             'Day_#16': '📝 Text Completion using HuggingFace Transformers',
             'Day_#17': '📝 Named Entity Recognition (NER) using BERT model from HuggingFace',
             'Day_#18': '📝 Text English to French Language Translation App',
-            'Day_#19': '',
+            'Day_#19': '📷 Instagram Analytics Web App',
+            'Day_#20': '',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
@@ -70,7 +71,8 @@ def main():
             'Day_#16': 'This app is a simple text completion app using GPT-2 model from HuggingFace Transformers.',
             'Day_#17': 'This app helps to identify the entities in a given text. The `bert-base-NER` model used from HuggingFace.',
             'Day_#18': 'This app uses the `Helsinki-NLP/opus-mt-en-fr` model to translate English text to French.',
-            'Day_#19': '',
+            'Day_#19': 'This app uses the `instaloader` library to download Instagram profile data.',
+            'Day_#20': '',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
@@ -91,7 +93,8 @@ def main():
             'Day_#16': 'HuggingFace Transformers',
             'Day_#17': 'HuggingFace Transformers',
             'Day_#18': 'HuggingFace Transformers',
-            'Day_#19': '',
+            'Day_#19': 'Instaloader',
+            'Day_#20': '',
         },
     })
 
