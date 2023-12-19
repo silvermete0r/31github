@@ -15,3 +15,4 @@ tensorflow<=2.15.0.post1
 transformers<=4.36.1
 xgboost<=2.0.2
 yfinance<=0.2.33
+instaloader<=4.10.2

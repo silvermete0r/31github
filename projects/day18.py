@@ -1,16 +1,16 @@
 import streamlit as st
-from transformers import MarianMTModel, MarianTokenizer
+from transformers import TFMarianMTModel, MarianTokenizer
 
 @st.cache_resource()
 def load_model():
     model_name = 'Helsinki-NLP/opus-mt-en-fr'
-    model = MarianMTModel.from_pretrained(model_name)
+    model = TFMarianMTModel.from_pretrained(model_name)
     tokenizer = MarianTokenizer.from_pretrained(model_name)
     return model, tokenizer
 
 def translate_text(text, source_lang="en", target_lang="fr"):
     model, tokenizer = load_model()
-    inputs = tokenizer(text, return_tensors="pt", truncation=True, padding="longest", max_length=512)
+    inputs = tokenizer(text, return_tensors="tf", truncation=True, padding="longest", max_length=512)
     translated = model.generate(**inputs, max_length=128)
     translated_text = tokenizer.batch_decode(translated, skip_special_tokens=True)[0]
     return translated_text
