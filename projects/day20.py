@@ -1,22 +1,16 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
 import cryptocompare
-from datetime import datetime, timedelta
+from datetime import datetime
 
 def fetch_crypto_data(coin, currency, limit=30):
-    end_time = datetime.now()
-    start_time = end_time - timedelta(days=limit)
-    historical_data = cryptocompare.get_historical_price_day(coin, currency, start_time, end_time, aggregate=1)
+    historical_data = cryptocompare.get_historical_price_day(coin, currency, limit=limit, exchange='CCCAGG', toTs=datetime.now())
     df = pd.DataFrame(historical_data)
-    df['time'] = pd.to_datetime(df['time'], unit='s')
+    df['time'] = pd.to_datetime(df['time'], unit='s').dt.date
     df.set_index('time', inplace=True)
+    df.drop(columns=['conversionType', 'conversionSymbol'], inplace=True)
+    df['change%'] = df['close'] / df['open'] * 100 - 100
     return df
-
-def calculate_sma(data, window=30):
-    # Calculate Simple Moving Average (SMA)
-    data['sma'] = data['close'].rolling(window=window).mean()
-    return data
 
 def app():
     st.title('Day #20')
@@ -28,29 +22,30 @@ def app():
     ''')
     st.write('---')
 
-    coin = st.selectbox('Select Crypto', ['BTC', 'ETH', 'XRP', 'LTC'])
-    currency = st.selectbox('Select Currency', ['USD', 'EUR', 'GBP', 'JPY'])
+    coin = st.selectbox('Select Crypto', ['BTC', 'ETH', 'XRP', 'LTC', 'BCH', 'BNB', 'EOS', 'XLM', 'TRX', 'ADA'])
+    currency = st.selectbox('Select Currency', ['USD', 'KZT', 'EUR', 'GBP', 'JPY', 'KRW', 'CNY', 'RUB', 'INR', 'TRY', 'BRL'])
 
     num_days = st.slider('Select Number of Days', 7, 365, 30)
 
-    crypto_data = fetch_crypto_data(coin, currency, num_days)
+    crypto_data = fetch_crypto_data(coin, currency, int(num_days))
 
-    window_size = st.slider('Select Window Size', 1, 100, 20)
+    # Visual Metrics Data
+    st.subheader('Today\'s State Information')
+    colA, colB, colC = st.columns(3)
+    colA.metric(label='Price', value=round(crypto_data['close'][-1], 2), delta=round(crypto_data['change%'][-1], 2))
+    colB.metric(label='Volume', value=round(crypto_data['volumefrom'][-1], 2), delta=round(crypto_data['volumeto'][-1], 2))
+    colC.metric(label='Volatility', value=round(crypto_data['high'][-1] - crypto_data['low'][-1], 2), delta=round(crypto_data['high'][-1] - crypto_data['low'][-1], 2))
 
-    crypto_data = calculate_sma(crypto_data, window_size)
+    st.markdown('### Data from the last {} days'.format(num_days))
 
-    fig = px.candlestick(crypto_data, x=crypto_data.index, open='open', high='high', low='low', close='close')
-    fig.add_trace(px.line(crypto_data, x=crypto_data.index, y='SMA', line_shape='linear', line=dict(color='orange')).data[0])
+    st.dataframe(crypto_data.style.highlight_max(axis=0, color='green').highlight_min(axis=0, color='purple'))   
 
-    fig.update_layout(
-        title=f'{coin} Historical Prices and SMA ({window_size} days)',
-        xaxis_title='Date',
-        yaxis_title=f'Price ({currency})',
-        xaxis_rangeslider_visible=False,
-    )
+    # Data Visualization
+    st.subheader('Opening and Closing Price')
+    st.line_chart(crypto_data[['open', 'close']])
 
-    st.plotly_chart(fig)
+    st.subheader('Volume')
+    st.line_chart(crypto_data['volumefrom'])
 
-    st.subheader('Additional Information:')
-    st.write(f"Current Price: {cryptocompare.get_price(coin, currency)[coin][currency]} {currency}")
-    st.write(f"Market Cap: {cryptocompare.get_avg(coin, currency)['MKTCAP'][currency]} {currency}")
+    st.subheader('Volatility')
+    st.line_chart(crypto_data['high'] - crypto_data['low'])

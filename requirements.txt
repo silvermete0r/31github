@@ -16,3 +16,4 @@ transformers<=4.36.1
 xgboost<=2.0.2
 yfinance<=0.2.33
 instaloader<=4.10.2
+cryptocompare<=0.7.6

@@ -49,7 +49,8 @@
 | [Day_#17](https://github.com/silvermete0r/31github/blob/master/projects/day17.py)  | 📝 Named Entity Recognition (NER) using BERT model from HuggingFace | This app helps to identify the entities in a given text. The `bert-base-NER` model used from HuggingFace. | HuggingFace Transformers |
 | [Day_#18](https://github.com/silvermete0r/31github/blob/master/projects/day18.py)  | 📝 Text English to French Language Translation App | This app uses the `Helsinki-NLP/opus-mt-en-fr` model to translate English text to French. | HuggingFace Transformers |
 | [Day_#19](https://github.com/silvermete0r/31github/blob/master/projects/day19.py)  | 📷 Instagram Analytics Web App | This app uses the `instaloader` library to download Instagram profile data. | Instaloader |
-| [Day_#20](https://github.com/silvermete0r/31github/blob/master/projects/day20.py)  |  |  |  |
+| [Day_#20](https://github.com/silvermete0r/31github/blob/master/projects/day20.py)  | ₿ Cryptocurrency Analytics Web App | This app is cryptocurrency analytics dashboard that allows you to analyze price, volume, and volatility of different cryptocurrencies. | Cryptocompare API |
+| [Day_#21](https://github.com/silvermete0r/31github/blob/master/projects/day21.py)  |  |  |  |
 
 
 <!-- LICENSE -->

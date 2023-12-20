@@ -1,6 +1,8 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 import pandas as pd
+import requests
+from constants import EMAIL_API
 from projects import day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16, day17, day18, day19, day20, day21, day22, day23, day24, day25, day26, day27, day28, day29, day30, day31
 
 # Set Page Config
@@ -22,6 +24,110 @@ def main():
             [![License](https://img.shields.io/github/license/silvermete0r/31github.svg?logo=github&style=flat-square)](https://github.com/silvermete0r/31github)
     ''')
     st.write('👋 My name is Arman, and I\'m very interested in Data Science and Machine Learning!')
+    st.write('📚 I\'m currently learning `Data Science` and `Machine Learning`.')
+    st.write('👨‍💻 All of my projects are available at [my GitHub](https://github.com/silvermete0r)')
+
+    st.subheader('My Projects')
+    st.table({
+        'Project': {
+            'Day_#1': '🏀 NBA Player Stats Explorer',
+            'Day_#2': '📈 Stocks Price Web App',
+            'Day_#3': '🧰 Streamlit Toolkit',
+            'Day_#4': '💎 No-Code ML Web App based on XGBoostRegressor',
+            'Day_#5': '🗃️ Excel & CSV Files Multi Merger',
+            'Day_#6': '📊 Machine Learning Model Performance Calculator',
+            'Day_#7': '🖼️ Image Quality Enhancement Web App',
+            'Day_#8': '😺 Github Profile Data Analyzer Web App',
+            'Day_#9': '🧑 Face Recognition Web App',
+            'Day_#10': '💡 Multi-Object Classifier Web App',
+            'Day_#11': '👾 Tensorflow Image Classification DL Model Training Baseline',
+            'Day_#12': '🌸 Tensorflow Simple Iris Classification App',
+            'Day_#13': '🏠 Tensorflow Regression Model Training Based on Boston Housing Dataset',
+            'Day_#14': '📝 Text Summarization using HuggingFace Transformers',
+            'Day_#15': '📝 Text Sentiment Analysis using HuggingFace Transformers',
+            'Day_#16': '📝 Text Completion using HuggingFace Transformers',
+            'Day_#17': '📝 Named Entity Recognition (NER) using BERT model from HuggingFace',
+            'Day_#18': '📝 Text English to French Language Translation App',
+            'Day_#19': '📷 Instagram Analytics Web App',
+            'Day_#20': '₿ Cryptocurrency Analytics Web App',
+            'Day_#21': '',
+        },
+        'Description': {
+            'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
+            'Day_#2': 'This app retrieves the list of the S&P 500 from Wikipedia and Analyze this companies stats using yfinance!',
+            'Day_#3': 'This app provides fully-explained useful cheatsheet for Streamlit Framework!',
+            'Day_#4': 'This app provides a no-code web interface to use XGBoostRegressor for training & testing Machine Learning Models based on various datasets.',
+            'Day_#5': 'This app merges multiple excel & csv files into one file.',
+            'Day_#6': 'This app evaluates the performance of machine learning models using various metrics.',
+            'Day_#7': 'This app enhances the quality of an image using various techniques.',
+            'Day_#8': 'This app analyzes the data of any Github profile using Github API.',
+            'Day_#9': 'This app detects faces in uploaded images using Haar Cascades.',
+            'Day_#10': 'This app predicts the class of different objects in an image using a pre-trained MobileNetV2 model.',
+            'Day_#11': 'This app trains a simple CNN model on the MNIST dataset using Tensorflow.',
+            'Day_#12': 'This app demonstrates a simple TensorFlow Iris classification model using the Sklearn Iris dataset.',
+            'Day_#13': 'This app demonstrates a simple Tensorflow regression model using the Boston Housing dataset.',
+            'Day_#14': 'This app is a simple text summarization app using HuggingFace Transformers.',
+            'Day_#15': 'This app is a simple text sentiment analysis app using `BERT` model from HuggingFace Transformers.',
+            'Day_#16': 'This app is a simple text completion app using GPT-2 model from HuggingFace Transformers.',
+            'Day_#17': 'This app helps to identify the entities in a given text. The `bert-base-NER` model used from HuggingFace.',
+            'Day_#18': 'This app uses the `Helsinki-NLP/opus-mt-en-fr` model to translate English text to French.',
+            'Day_#19': 'This app uses the `instaloader` library to download Instagram profile data.',
+            'Day_#20': 'This app is cryptocurrency analytics dashboard that allows you to analyze price, volume, and volatility of different cryptocurrencies.',
+            'Day_#21': '',
+        },
+        'Reference': {
+            'Day_#1': 'Data Professor',
+            'Day_#2': 'Data Professor',
+            'Day_#3': 'Streamlit Docs',
+            'Day_#4': 'Data Professor',
+            'Day_#5': 'Data Professor',
+            'Day_#6': 'Data Professor',
+            'Day_#7': 'OpenCV Docs',
+            'Day_#8': 'Github API Docs',
+            'Day_#9': 'OpenCV Haar Cascades',
+            'Day_#10': 'MobileNetV2',
+            'Day_#11': 'Tensorflow Guide',
+            'Day_#12': 'Tensorflow Guide',
+            'Day_#13': 'Tensorflow Guide',
+            'Day_#14': 'HuggingFace Transformers',
+            'Day_#15': 'HuggingFace Transformers',
+            'Day_#16': 'HuggingFace Transformers',
+            'Day_#17': 'HuggingFace Transformers',
+            'Day_#18': 'HuggingFace Transformers',
+            'Day_#19': 'Instaloader',
+            'Day_#20': 'Cryptocompare API',
+            'Day_#21': '',
+        },
+    })
+
+    st.subheader('Contact Me')
+
+    def send_message(user_name, user_email, user_message):
+        return requests.post(
+        "https://api.mailgun.net/v3/sandboxebd1ff2187ca4bf6a7610daf43c30c0a.mailgun.org/messages",
+        auth=("api", EMAIL_API),
+        data={"from": "Mailgun Sandbox <postmaster@sandboxebd1ff2187ca4bf6a7610daf43c30c0a.mailgun.org>",
+            "to": "Supwithproject <supwithproject@gmail.com>",
+            "subject": f"31Days Dataflow User Message from {user_name} <{user_email}>",
+            "text": user_message})
+
+    with st.form(key='contact_form', clear_on_submit=True):
+        user_name = st.text_input('Name')
+        user_email = st.text_input('Email')
+        user_message = st.text_area('Message')
+        submitted = st.form_submit_button('Submit')
+        if submitted:
+            try:
+                send_message(user_name, user_email, user_message)
+                st.success('Thank you for your message! I will get back to you as soon as possible.')
+            except Exception as e:
+                st.error('Something went wrong... Please try again.')
+                st.error(e)
+
+    col1, col2, col3 = st.columns(3)
+    col1.write('✈️ Telegram: [@silvermete0r](https://t.me/silvermete0r)')
+    col2.write('📷 Instagram: [@grembim](https://www.instagram.com/grembim)')
+    col3.write('🔗 Taplink: [@grembim](https://one.link/grembim)')
 
 # Multipage WebApp Design
 class MultiApp:
