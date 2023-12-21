@@ -5,19 +5,24 @@ import numpy as np
 import cv2
 
 # Load the pre-trained MobileNetV2 model
-model = tf.keras.applications.mobilenet_v2.MobileNetV2(
-    input_shape=None,
-    alpha=1.0,
-    include_top=True,
-    weights='imagenet',
-    input_tensor=None,
-    pooling=None,
-    classes=1000,
-    classifier_activation='softmax'
-)
+@st.cache_resource()
+def load_model():
+    model = tf.keras.applications.mobilenet_v2.MobileNetV2(
+        input_shape=None,
+        alpha=1.0,
+        include_top=True,
+        weights='imagenet',
+        input_tensor=None,
+        pooling=None,
+        classes=1000,
+        classifier_activation='softmax'
+    )
+    return model
 
 # Image Classification function
 def classify_object(image):
+    model = load_model()
+
     # Resize the image to fit the MobileNetV2 input size
     resized_img = cv2.resize(image, (224, 224))
     resized_img = np.expand_dims(resized_img, axis=0)
