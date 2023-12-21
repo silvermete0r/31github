@@ -4,3 +4,6 @@ backgroundColor="#2B2934"
 secondaryBackgroundColor="#1C1B21"
 textColor="#ffffff"
 font="sans serif"
+
+[deprecation]
+showPyplotGlobalUse = false

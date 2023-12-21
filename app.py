@@ -49,8 +49,9 @@ def main():
             'Day_#17': '📝 Named Entity Recognition (NER) using BERT model from HuggingFace',
             'Day_#18': '📝 Text English to French Language Translation App',
             'Day_#19': '📷 Instagram Analytics Web App',
-            'Day_#20': '₿ Cryptocurrency Analytics Web App',
-            'Day_#21': '',
+            'Day_#20': '🥮 Cryptocurrency Analytics Web App',
+            'Day_#21': '💰 Data Scientists Salary Analysis',
+            'Day_#22': '',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
@@ -73,7 +74,8 @@ def main():
             'Day_#18': 'This app uses the `Helsinki-NLP/opus-mt-en-fr` model to translate English text to French.',
             'Day_#19': 'This app uses the `instaloader` library to download Instagram profile data.',
             'Day_#20': 'This app is cryptocurrency analytics dashboard that allows you to analyze price, volume, and volatility of different cryptocurrencies.',
-            'Day_#21': '',
+            'Day_#21': 'This app shows how to use Streamlit to create charts and plots for data visualization on the example of Data Scientists Salary Analysis.',
+            'Day_#22': '',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
@@ -96,7 +98,8 @@ def main():
             'Day_#18': 'HuggingFace Transformers',
             'Day_#19': 'Instaloader',
             'Day_#20': 'Cryptocompare API',
-            'Day_#21': '',
+            'Day_#21': 'Streamlit Docs',
+            'Day_#22': '',
         },
     })
 
