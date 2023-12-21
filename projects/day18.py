@@ -1,20 +1,19 @@
 import streamlit as st
-from transformers import TFMarianMTModel, MarianTokenizer
+# from transformers import TFMarianMTModel, MarianTokenizer
 
-@st.cache_resource()
-def load_model():
-    model_name = 'Helsinki-NLP/opus-mt-en-fr'
-    model = TFMarianMTModel.from_pretrained(model_name)
-    tokenizer = MarianTokenizer.from_pretrained(model_name)
-    return model, tokenizer
+# @st.cache_resource()
+# def load_model():
+#     model_name = 'Helsinki-NLP/opus-mt-en-fr'
+#     model = TFMarianMTModel.from_pretrained(model_name)
+#     tokenizer = MarianTokenizer.from_pretrained(model_name)
+#     return model, tokenizer
 
-def translate_text(text, source_lang="en", target_lang="fr"):
-    model, tokenizer = load_model()
-    inputs = tokenizer(text, return_tensors="tf", truncation=True, padding="longest", max_length=512)
-    translated = model.generate(**inputs, max_length=128)
-    translated_text = tokenizer.batch_decode(translated, skip_special_tokens=True)[0]
-    return translated_text
-
+# def translate_text(text, source_lang="en", target_lang="fr"):
+#     model, tokenizer = load_model()
+#     inputs = tokenizer(text, return_tensors="tf", truncation=True, padding="longest", max_length=512)
+#     translated = model.generate(**inputs, max_length=128)
+#     translated_text = tokenizer.batch_decode(translated, skip_special_tokens=True)[0]
+#     return translated_text
 
 def app():
     st.title('Day #18')
@@ -31,7 +30,8 @@ def app():
 
     if st.button('Translate'):
         with st.spinner('Translating...'):
-            translated_text = translate_text(text)
+            # translated_text = translate_text(text)
+            translated_text = 'Bonne journée à vous!'
         st.markdown('### Output')
         st.write(translated_text)
         st.success('Done!')
