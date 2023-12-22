@@ -11,9 +11,10 @@ scikit_learn<=1.2.2
 seaborn<=0.13.0
 streamlit<=1.23.1
 streamlit_option_menu<=0.3.6
-tensorflow==2.11.0
+tensorflow<=2.2.0rc1
 transformers<=4.36.1
 xgboost<=2.0.2
 yfinance<=0.2.33
 instaloader<=4.10.2
 cryptocompare<=0.7.6 
+rembg<=2.0.53

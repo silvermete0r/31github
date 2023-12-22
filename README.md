@@ -51,7 +51,8 @@
 | [Day_#19](https://github.com/silvermete0r/31github/blob/master/projects/day19.py)  | 📷 Instagram Analytics Web App | This app uses the `instaloader` library to download Instagram profile data. | Instaloader |
 | [Day_#20](https://github.com/silvermete0r/31github/blob/master/projects/day20.py)  | 🥮 Cryptocurrency Analytics Web App | This app is cryptocurrency analytics dashboard that allows you to analyze price, volume, and volatility of different cryptocurrencies. | Cryptocompare API |
 | [Day_#21](https://github.com/silvermete0r/31github/blob/master/projects/day21.py)  | 💰 Data Scientists Salary Analysis | This app shows how to use Streamlit to create charts and plots for data visualization on the example of Data Scientists Salary Analysis. | Streamlit Docs |
-| [Day_#22](https://github.com/silvermete0r/31github/blob/master/projects/day22.py)  |  |  |  |
+| [Day_#22](https://github.com/silvermete0r/31github/blob/master/projects/day22.py)  | 🧹 Image Background Remover Web App | This app removes the background of an image using a python `rembg` module. | tyler-simons/BackgroundRemoval |
+| [Day_#23](https://github.com/silvermete0r/31github/blob/master/projects/day23.py)  |  |  |  |
 
 
 <!-- LICENSE -->

@@ -51,7 +51,8 @@ def main():
             'Day_#19': '📷 Instagram Analytics Web App',
             'Day_#20': '🥮 Cryptocurrency Analytics Web App',
             'Day_#21': '💰 Data Scientists Salary Analysis',
-            'Day_#22': '',
+            'Day_#22': '🧹 Image Background Remover Web App',
+            'Day_#23': '',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
@@ -75,7 +76,8 @@ def main():
             'Day_#19': 'This app uses the `instaloader` library to download Instagram profile data.',
             'Day_#20': 'This app is cryptocurrency analytics dashboard that allows you to analyze price, volume, and volatility of different cryptocurrencies.',
             'Day_#21': 'This app shows how to use Streamlit to create charts and plots for data visualization on the example of Data Scientists Salary Analysis.',
-            'Day_#22': '',
+            'Day_#22': 'This app removes the background of an image using a python `rembg` module.',
+            'Day_#23': '',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
@@ -99,7 +101,8 @@ def main():
             'Day_#19': 'Instaloader',
             'Day_#20': 'Cryptocompare API',
             'Day_#21': 'Streamlit Docs',
-            'Day_#22': '',
+            'Day_#22': 'tyler-simons/BackgroundRemoval',
+            'Day_#23': '',
         },
     })
 
