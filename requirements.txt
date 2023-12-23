@@ -18,3 +18,4 @@ yfinance<=0.2.33
 instaloader<=4.10.2
 cryptocompare<=0.7.6 
 rembg<=2.0.53
+qaznltk<=1.1.4

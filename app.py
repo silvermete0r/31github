@@ -52,7 +52,8 @@ def main():
             'Day_#20': '🥮 Cryptocurrency Analytics Web App',
             'Day_#21': '💰 Data Scientists Salary Analysis',
             'Day_#22': '🧹 Image Background Remover Web App',
-            'Day_#23': '',
+            'Day_#23': '🛠️ QazNLTK - kazakh language processing library based Web App',
+            'Day_#24': '',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
@@ -77,7 +78,8 @@ def main():
             'Day_#20': 'This app is cryptocurrency analytics dashboard that allows you to analyze price, volume, and volatility of different cryptocurrencies.',
             'Day_#21': 'This app shows how to use Streamlit to create charts and plots for data visualization on the example of Data Scientists Salary Analysis.',
             'Day_#22': 'This app removes the background of an image using a python `rembg` module.',
-            'Day_#23': '',
+            'Day_#23': 'This app show the basic usage of `QazNLTK` library.',
+            'Day_#24': '',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
@@ -102,7 +104,8 @@ def main():
             'Day_#20': 'Cryptocompare API',
             'Day_#21': 'Streamlit Docs',
             'Day_#22': 'tyler-simons/BackgroundRemoval',
-            'Day_#23': '',
+            'Day_#23': 'QazNLTK',
+            'Day_#24': '',
         },
     })
 

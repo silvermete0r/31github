@@ -36,8 +36,8 @@ def app():
 
         st.markdown('### Usage')
         st.code('''
-            from qaznltk import QazNLP as qnltk
-            qn = qnltk.QazNLP()
+            from qaznltk import QazNLTK as qnltk
+            qn = qnltk.QazNLTK()
         ''', language='python')
 
     with tabC:
