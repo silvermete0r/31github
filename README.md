@@ -53,7 +53,8 @@
 | [Day_#21](https://github.com/silvermete0r/31github/blob/master/projects/day21.py)  | 💰 Data Scientists Salary Analysis | This app shows how to use Streamlit to create charts and plots for data visualization on the example of Data Scientists Salary Analysis. | Streamlit Docs |
 | [Day_#22](https://github.com/silvermete0r/31github/blob/master/projects/day22.py)  | 🧹 Image Background Remover Web App | This app removes the background of an image using a python `rembg` module. | tyler-simons/BackgroundRemoval |
 | [Day_#23](https://github.com/silvermete0r/31github/blob/master/projects/day23.py)  | 🛠️ QazNLTK - kazakh language processing library based Web App | This app show the basic usage of `QazNLTK` library. | QazNLTK |
-| [Day_#24](https://github.com/silvermete0r/31github/blob/master/projects/day24.py)  |  |  |  |
+| [Day_#24](https://github.com/silvermete0r/31github/blob/master/projects/day24.py)  | 📰 HackerNews Streamlit App | This app is a clone of [HackerNews](https://news.ycombinator.com/) in Streamlit UI. | HackerNews API |
+| [Day_#25](https://github.com/silvermete0r/31github/blob/master/projects/day25.py)  |  |  |  |
 
 
 <!-- LICENSE -->
