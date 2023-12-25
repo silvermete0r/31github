@@ -108,7 +108,7 @@ def main():
             'Day_#22': 'tyler-simons/BackgroundRemoval',
             'Day_#23': 'QazNLTK',
             'Day_#24': 'HackerNews API',
-            'Day_#25': '',
+            'Day_#25': 'OpenCV Docs',
         },
     })
 
