@@ -54,7 +54,8 @@ def main():
             'Day_#22': '🧹 Image Background Remover Web App',
             'Day_#23': '🛠️ QazNLTK - kazakh language processing library based Web App',
             'Day_#24': '📰 HackerNews Streamlit App',
-            'Day_#25': '',
+            'Day_#25': '📜 Certificate of Completion Generator',
+            'Day_#26': '',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
@@ -81,7 +82,8 @@ def main():
             'Day_#22': 'This app removes the background of an image using a python `rembg` module.',
             'Day_#23': 'This app show the basic usage of `QazNLTK` library.',
             'Day_#24': 'This app is a clone of HackerNews in Streamlit UI.',
-            'Day_#25': '',
+            'Day_#25': 'This app is a simple certificate of completion generator using `OpenCV` and `Pillow`.',
+            'Day_#26': '',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
@@ -109,6 +111,7 @@ def main():
             'Day_#23': 'QazNLTK',
             'Day_#24': 'HackerNews API',
             'Day_#25': 'OpenCV Docs',
+            'Day_#26': '',
         },
     })
 
