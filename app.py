@@ -55,7 +55,8 @@ def main():
             'Day_#23': '🛠️ QazNLTK - kazakh language processing library based Web App',
             'Day_#24': '📰 HackerNews Streamlit App',
             'Day_#25': '📜 Certificate of Completion Generator',
-            'Day_#26': '',
+            'Day_#26': '🗺️ Streamlit Maps Web App',
+            'Day_#27': '',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
@@ -83,7 +84,8 @@ def main():
             'Day_#23': 'This app show the basic usage of `QazNLTK` library.',
             'Day_#24': 'This app is a clone of HackerNews in Streamlit UI.',
             'Day_#25': 'This app is a simple certificate of completion generator using `OpenCV` and `Pillow`.',
-            'Day_#26': '',
+            'Day_#26': 'This app is a demo of the Streamlit Maps functionality.',
+            'Day_#27': '',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
@@ -111,7 +113,8 @@ def main():
             'Day_#23': 'QazNLTK',
             'Day_#24': 'HackerNews API',
             'Day_#25': 'OpenCV Docs',
-            'Day_#26': '',
+            'Day_#26': 'Streamlit Docs',
+            'Day_#27': '',
         },
     })
 

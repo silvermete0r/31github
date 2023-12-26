@@ -55,7 +55,8 @@
 | [Day_#23](https://github.com/silvermete0r/31github/blob/master/projects/day23.py)  | 🛠️ QazNLTK - kazakh language processing library based Web App | This app show the basic usage of `QazNLTK` library. | QazNLTK |
 | [Day_#24](https://github.com/silvermete0r/31github/blob/master/projects/day24.py)  | 📰 HackerNews Streamlit App | This app is a clone of [HackerNews](https://news.ycombinator.com/) in Streamlit UI. | HackerNews API |
 | [Day_#25](https://github.com/silvermete0r/31github/blob/master/projects/day25.py)  | 📜 Certificate of Completion Generator | This app is a simple certificate of completion generator using `OpenCV` and `Pillow`. | OpenCV Docs |
-| [Day_#26](https://github.com/silvermete0r/31github/blob/master/projects/day26.py)  |  |  |  |
+| [Day_#26](https://github.com/silvermete0r/31github/blob/master/projects/day26.py)  | 🗺️ Streamlit Maps Web App | This app is a demo of the Streamlit Maps functionality. | Streamlit Docs |
+| [Day_#27](https://github.com/silvermete0r/31github/blob/master/projects/day27.py)  |  |  |  |
 
 
 <!-- LICENSE -->
