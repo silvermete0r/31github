@@ -2,7 +2,7 @@ import streamlit as st
 
 def app():
     st.title('Day #27')
-    st.subheader('')
+    st.subheader('App Gallery')
     st.markdown('''
         This app..
         
