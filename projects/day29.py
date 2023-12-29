@@ -2,12 +2,10 @@ import streamlit as st
 
 def app():
     st.title('Day #29')
-    st.subheader('')
+    st.subheader('Brain Tumor Detection using TensorFlow')
     st.markdown('''
-        This app..
-        
-        Desctiption..
+        This app is a demo of Brain Tumor Detection using TensorFlow.
                 
-        Reference: []()
+        Reference: [Tensorflow Guide](https://www.tensorflow.org/)
     ''')
     st.write('---')

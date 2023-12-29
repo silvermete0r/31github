@@ -56,7 +56,11 @@ def main():
             'Day_#24': '📰 HackerNews Streamlit App',
             'Day_#25': '📜 Certificate of Completion Generator',
             'Day_#26': '🗺️ Streamlit Maps Web App',
-            'Day_#27': '',
+            'Day_#27': '⏰ Time Series Forecasting with NeuralProphet',
+            'Day_#28': '⚙️ Optuna - Auto Hyperparameter Tuning WebApp',
+            'Day_#29': '🧠 Brain Tumor Detection using TensorFlow',
+            'Day_#30': '',
+            'Day_#31': '',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
@@ -85,7 +89,11 @@ def main():
             'Day_#24': 'This app is a clone of HackerNews in Streamlit UI.',
             'Day_#25': 'This app is a simple certificate of completion generator using `OpenCV` and `Pillow`.',
             'Day_#26': 'This app is a demo of the Streamlit Maps functionality.',
-            'Day_#27': '',
+            'Day_#27': 'This app is a demo of Time Series Forecasting with NeuralProphet.',
+            'Day_#28': 'This app is a demo of Optuna - Auto Hyperparameter Tuning.',
+            'Day_#29': 'This app is a demo of Brain Tumor Detection using TensorFlow.',
+            'Day_#30': '',
+            'Day_#31': '',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
@@ -114,7 +122,11 @@ def main():
             'Day_#24': 'HackerNews API',
             'Day_#25': 'OpenCV Docs',
             'Day_#26': 'Streamlit Docs',
-            'Day_#27': '',
+            'Day_#27': 'NeuralProphet',
+            'Day_#28': 'Optuna Docs',
+            'Day_#29': 'Tensorflow Guide',
+            'Day_#30': '',
+            'Day_#31': '',
         },
     })
 
