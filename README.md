@@ -59,8 +59,8 @@
 | [Day_#27](https://github.com/silvermete0r/31github/blob/master/projects/day27.py)  | ⏰ Time Series Forecasting with NeuralProphet | This app is a demo of Time Series Forecasting with NeuralProphet. | NeuralProphet |
 | [Day_#28](https://github.com/silvermete0r/31github/blob/master/projects/day27.py)  | ⚙️ Optuna - Auto Hyperparameter Tuning WebApp | This app is a demo of Optuna - Auto Hyperparameter Tuning. | Optuna Docs |
 | [Day_#29](https://github.com/silvermete0r/31github/blob/master/projects/day27.py)  | 🧠 Brain Tumor Detection using TensorFlow | This app is a demo of Brain Tumor Detection using TensorFlow. | Tensorflow Guide |
-| [Day_#30](https://github.com/silvermete0r/31github/blob/master/projects/day27.py)  |  |  |  |
-| [Day_#31](https://github.com/silvermete0r/31github/blob/master/projects/day27.py)  |  |  |  |
+| [Day_#30](https://github.com/silvermete0r/31github/blob/master/projects/day27.py)  | 📚 Storytelling with Data Visualization using `ipyvizzu` | This app is a simple example of how to use `ipyvizzu` to create interactive data visualization. | Data Professor |
+| [Day_#31](https://github.com/silvermete0r/31github/blob/master/projects/day27.py)  | 🎄 Happy New Year 2024 Streamlit App! | This app is a last app for 2023 Github 31 Days of Streamlit Challenge. | Streamlit Community |
 
 
 <!-- LICENSE -->

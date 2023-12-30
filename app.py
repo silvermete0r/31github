@@ -59,8 +59,8 @@ def main():
             'Day_#27': '⏰ Time Series Forecasting with NeuralProphet',
             'Day_#28': '⚙️ Optuna - Auto Hyperparameter Tuning WebApp',
             'Day_#29': '🧠 Brain Tumor Detection using TensorFlow',
-            'Day_#30': '',
-            'Day_#31': '',
+            'Day_#30': '📚 Storytelling with Data Visualization using `ipyvizzu`',
+            'Day_#31': '🎄 Happy New Year 2024 Streamlit App!',
         },
         'Description': {
             'Day_#1': 'This app analyze data about NBA Basketball Player Stats in Regular Seasons! Data taken from official resource using web scrapping!',
@@ -92,8 +92,8 @@ def main():
             'Day_#27': 'This app is a demo of Time Series Forecasting with NeuralProphet.',
             'Day_#28': 'This app is a demo of Optuna - Auto Hyperparameter Tuning.',
             'Day_#29': 'This app is a demo of Brain Tumor Detection using TensorFlow.',
-            'Day_#30': '',
-            'Day_#31': '',
+            'Day_#30': 'This app is a simple example of how to use `ipyvizzu` to create interactive data visualization.',
+            'Day_#31': 'This app is a last app for 2023 Github 31 Days of Streamlit Challenge.',
         },
         'Reference': {
             'Day_#1': 'Data Professor',
@@ -125,8 +125,8 @@ def main():
             'Day_#27': 'NeuralProphet',
             'Day_#28': 'Optuna Docs',
             'Day_#29': 'Tensorflow Guide',
-            'Day_#30': '',
-            'Day_#31': '',
+            'Day_#30': 'Data Professor',
+            'Day_#31': 'Streamlit Community',
         },
     })
 
