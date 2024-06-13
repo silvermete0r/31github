@@ -57,10 +57,10 @@
 | [Day_#25](https://github.com/silvermete0r/31github/blob/master/projects/day25.py)  | 📜 Certificate of Completion Generator | This app is a simple certificate of completion generator using `OpenCV` and `Pillow`. | OpenCV Docs |
 | [Day_#26](https://github.com/silvermete0r/31github/blob/master/projects/day26.py)  | 🗺️ Streamlit Maps Web App | This app is a demo of the Streamlit Maps functionality. | Streamlit Docs |
 | [Day_#27](https://github.com/silvermete0r/31github/blob/master/projects/day27.py)  | ⏰ Time Series Forecasting with NeuralProphet | This app is a demo of Time Series Forecasting with NeuralProphet. | NeuralProphet |
-| [Day_#28](https://github.com/silvermete0r/31github/blob/master/projects/day27.py)  | ⚙️ Optuna - Auto Hyperparameter Tuning WebApp | This app is a demo of Optuna - Auto Hyperparameter Tuning. | Optuna Docs |
-| [Day_#29](https://github.com/silvermete0r/31github/blob/master/projects/day27.py)  | 🧠 Brain Tumor Detection using TensorFlow | This app is a demo of Brain Tumor Detection using TensorFlow. | Tensorflow Guide |
-| [Day_#30](https://github.com/silvermete0r/31github/blob/master/projects/day27.py)  | 📚 Storytelling with Data Visualization using `ipyvizzu` | This app is a simple example of how to use `ipyvizzu` to create interactive data visualization. | Data Professor |
-| [Day_#31](https://github.com/silvermete0r/31github/blob/master/projects/day27.py)  | 🎄 Happy New Year 2024 Streamlit App! | This app is a last app for 2023 Github 31 Days of Streamlit Challenge. | Streamlit Community |
+| [Day_#28](https://github.com/silvermete0r/31github/blob/master/projects/day28.py)  | ⚙️ Optuna - Auto Hyperparameter Tuning WebApp | This app is a demo of Optuna - Auto Hyperparameter Tuning. | Optuna Docs |
+| [Day_#29](https://github.com/silvermete0r/31github/blob/master/projects/day29.py)  | 🧠 Brain Tumor Detection using TensorFlow | This app is a demo of Brain Tumor Detection using TensorFlow. | Tensorflow Guide |
+| [Day_#30](https://github.com/silvermete0r/31github/blob/master/projects/day30.py)  | 📚 Storytelling with Data Visualization using `ipyvizzu` | This app is a simple example of how to use `ipyvizzu` to create interactive data visualization. | Data Professor |
+| [Day_#31](https://github.com/silvermete0r/31github/blob/master/projects/day31.py)  | 🎄 Happy New Year 2024 Streamlit App! | This app is a last app for 2023 Github 31 Days of Streamlit Challenge. | Streamlit Community |
 
 
 <!-- LICENSE -->
